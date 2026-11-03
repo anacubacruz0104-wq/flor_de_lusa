@@ -7,7 +7,7 @@ Site de agendamento do Flor de Lusa Studio (Nail Designer), com dois endereços:
 | `/` | Clientes | Abertura em tela cheia, galeria de trabalhos, serviços e valores, calendário, horários livres, solicitação com redirecionamento para o WhatsApp, Pix com QR Code |
 | `/admin` | Só a profissional (com senha) | Agenda, pendentes para confirmar, financeiro, clientes, serviços e valores, galeria, horários e folgas, abrir/fechar agenda, ajustes |
 
-No ar em: https://flordelusa-flor-de-lusa.vercel.app
+No ar em: https://flordelusa.vercel.app (painel em https://flordelusa.vercel.app/admin)
 
 ## Como funciona
 
