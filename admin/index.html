@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flor de Lusa Painel</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#faf6f0">
+<link rel="icon" href="/assets/favicon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;600;700&family=Marcellus&display=swap">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/admin.css">
+<link rel="stylesheet" href="/css/extra.css">
+</head>
+<body>
+
+<section class="login" id="telaLogin" hidden>
+  <form class="login-cartao" id="formLogin" novalidate>
+    <img src="/assets/logo.webp" alt="Flor de Lusa Studio" width="120" height="120" class="login-logo">
+    <p class="rotulo">Painel da profissional</p>
+    <h1>Bem-vinda de volta</h1>
+    <p class="login-demo" id="loginDemo" hidden>Modo demonstração: use qualquer e-mail e a senha <strong>demo</strong>.</p>
+    <label class="campo"><span>E-mail</span><input class="entrada" id="lEmail" type="email" autocomplete="username" required></label>
+    <label class="campo"><span>Senha</span><input class="entrada" id="lSenha" type="password" autocomplete="current-password" required></label>
+    <p class="erro-login" id="erroLogin" role="alert" hidden></p>
+    <button class="btn btn-bloco" type="submit" id="btnEntrar">Entrar</button>
+    <a class="voltar-site" href="/">Ver página de agendamento</a>
+  </form>
+</section>
+
+<div class="app" id="app" hidden>
+  <header class="cab">
+    <div class="cab-in">
+      <img src="/assets/favicon.webp" alt="" width="40" height="40" class="cab-logo">
+      <div class="cab-nome">
+        <strong id="cabNome">Flor de Lusa Studio</strong>
+        <span class="rotulo">Painel</span>
+      </div>
+      <button type="button" class="interruptor" id="togAgenda" role="switch" aria-checked="true">
+        <span class="interruptor-trilho" aria-hidden="true"><span></span></span>
+        <span class="interruptor-txt">Agenda aberta</span>
+      </button>
+      <div class="cab-acoes">
+        <a class="btn btn-contorno btn-pequeno" href="/" target="_blank" rel="noopener">Ver site</a>
+        <button type="button" class="btn btn-contorno btn-pequeno" id="btnSair">Sair</button>
+      </div>
+    </div>
+    <nav class="abas" aria-label="Seções do painel">
+      <div class="abas-in" role="tablist">
+        <a href="#agenda" data-aba="agenda" role="tab">Agenda <span class="bolinha" id="badgePend" hidden></span></a>
+        <a href="#financeiro" data-aba="financeiro" role="tab">Financeiro</a>
+        <a href="#clientes" data-aba="clientes" role="tab">Clientes</a>
+        <a href="#servicos" data-aba="servicos" role="tab">Serviços e valores</a>
+        <a href="#galeria" data-aba="galeria" role="tab">Galeria</a>
+        <a href="#horarios" data-aba="horarios" role="tab">Horários</a>
+        <a href="#ajustes" data-aba="ajustes" role="tab">Ajustes</a>
+      </div>
+    </nav>
+  </header>
+  <div class="aviso-demo-admin" id="avisoDemo" hidden>Modo demonstração.</div>
+  <main class="corpo" id="corpo"><p class="carregando">Carregando…</p></main>
+</div>
+
+<div id="modais"></div>
+
+<script src="/js/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="/js/core.js"></script>
+<script src="/js/admin.js"></script>
+<script src="/js/admin-galeria.js"></script>
+</body>
+</html>

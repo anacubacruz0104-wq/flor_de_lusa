@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flor de Lusa Studio</title>
+<meta name="description" content="Agende seu horário no Flor de Lusa Studio · Nail Designer. Alongamento F1, banho de gel, esmaltação em gel e nail art.">
+<meta name="theme-color" content="#faf6f0">
+<meta property="og:title" content="Flor de Lusa Studio · Agende seu horário">
+<meta property="og:description" content="Portugal ◇ Brasil · Beleza em cada detalhe.">
+<meta property="og:image" content="/assets/logo.webp">
+<link rel="icon" href="/assets/favicon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Karla:wght@400;500;600;700&family=Marcellus&display=swap">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/cliente.css">
+<link rel="stylesheet" href="/css/extra.css">
+</head>
+<body>
+
+<section class="abertura" id="inicio" aria-label="Flor de Lusa Studio">
+  <div class="abertura-fundo" aria-hidden="true"></div>
+  <div class="abertura-in">
+    <p class="rotulo anim" style="--d:0">Agenda online</p>
+    <img class="abertura-logo anim" style="--d:1" src="/assets/logo.webp" alt="Logo Flor de Lusa Studio" width="210" height="210">
+    <h1 class="abertura-titulo anim" style="--d:2"><span>Flor de <em>Lusa</em></span><small>Studio · Nail Designer</small></h1>
+    <div class="abertura-fio anim" style="--d:3" aria-hidden="true"><span class="losango"></span></div>
+    <p class="abertura-frase anim" style="--d:3">Raízes portuguesas, beleza que floresce em cada detalhe.</p>
+    <div class="abertura-acoes anim" style="--d:4">
+      <a class="btn" href="#agendar">Agendar horário</a>
+      <a class="btn btn-contorno" id="topoWhats" href="https://wa.me/" target="_blank" rel="noopener" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <ul class="info anim" style="--d:5" id="info" aria-label="Informações do estúdio"></ul>
+  </div>
+  <a class="abertura-seta" href="#conteudo"><span>Arraste para baixo</span><i aria-hidden="true"></i></a>
+</section>
+<div class="azulejo-faixa" aria-hidden="true"></div>
+
+<div id="conteudo">
+<section class="galeria revelar" id="galeria" aria-labelledby="tGal" hidden>
+  <div class="galeria-cab">
+    <div><p class="rotulo">Portfólio</p><h2 id="tGal">Trabalhos <em>recentes</em></h2></div>
+    <div class="galeria-setas"><span class="galeria-contagem"></span><button type="button" data-galeria-mover="-1" aria-label="Fotos anteriores">‹</button><button type="button" data-galeria-mover="1" aria-label="Próximas fotos">›</button></div>
+  </div>
+  <div class="galeria-trilho"></div>
+</section>
+
+<main id="agendar" class="miolo">
+  <div id="avisoDemo" class="aviso aviso-demo" hidden>
+    <strong>Modo demonstração.</strong> Os agendamentos feitos aqui ficam só neste aparelho.
+  </div>
+  <div id="avisoFechada" class="aviso aviso-fechada" hidden></div>
+
+  <section class="etapa revelar" id="etapaServicos" aria-labelledby="t1">
+    <div class="etapa-cab">
+      <span class="etapa-n" aria-hidden="true"><b>1</b></span>
+      <div>
+        <h2 id="t1">Escolha o serviço</h2>
+        <p class="etapa-dica">Você pode somar complementos ao serviço principal.</p>
+      </div>
+    </div>
+    <div id="listaPrincipais" class="servicos"><p class="carregando">Carregando serviços…</p></div>
+    <div id="blocoExtras" hidden>
+      <p class="rotulo sub-rotulo">Complementos</p>
+      <div id="listaExtras" class="servicos servicos-extras"></div>
+    </div>
+  </section>
+
+  <section class="etapa revelar" id="etapaData" aria-labelledby="t2">
+    <div class="etapa-cab">
+      <span class="etapa-n" aria-hidden="true"><b>2</b></span>
+      <div>
+        <h2 id="t2">Escolha o dia</h2>
+        <p class="etapa-dica">Dias apagados não têm atendimento.</p>
+      </div>
+    </div>
+    <div class="cal" id="cal">
+      <div class="cal-cab">
+        <button class="cal-nav" id="calAnt" type="button" aria-label="Mês anterior">‹</button>
+        <p class="cal-mes" id="calMes" aria-live="polite"></p>
+        <button class="cal-nav" id="calProx" type="button" aria-label="Próximo mês">›</button>
+      </div>
+      <div class="cal-semana" aria-hidden="true"><span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span></div>
+      <div class="cal-grade" id="calGrade" role="grid"></div>
+    </div>
+  </section>
+
+  <section class="etapa revelar" id="etapaHora" aria-labelledby="t3">
+    <div class="etapa-cab">
+      <span class="etapa-n" aria-hidden="true"><b>3</b></span>
+      <div>
+        <h2 id="t3">Escolha o horário</h2>
+        <p class="etapa-dica" id="dicaHora">Escolha o serviço e o dia para ver os horários.</p>
+      </div>
+    </div>
+    <div id="horas" class="horas"></div>
+  </section>
+
+  <section class="etapa revelar" id="etapaDados" aria-labelledby="t4">
+    <div class="etapa-cab">
+      <span class="etapa-n" aria-hidden="true"><b>4</b></span>
+      <div>
+        <h2 id="t4">Seus dados</h2>
+        <p class="etapa-dica">Usamos seu WhatsApp só para confirmar o horário.</p>
+      </div>
+    </div>
+    <form id="form" class="form" novalidate>
+      <label class="campo"><span>Nome</span>
+        <input class="entrada" id="fNome" name="nome" autocomplete="name" maxlength="80" required placeholder="Como você gosta de ser chamada">
+      </label>
+      <label class="campo"><span>WhatsApp com DDD</span>
+        <input class="entrada" id="fWhats" name="whats" inputmode="tel" autocomplete="tel" maxlength="16" required placeholder="(37) 99999-9999">
+      </label>
+      <label class="campo"><span>Observação <small>(opcional)</small></span>
+        <textarea class="entrada" id="fObs" name="obs" maxlength="500" placeholder="Ex.: quero um formato amendoado, tenho uma unha quebrada…"></textarea>
+      </label>
+      <label class="check">
+        <input type="checkbox" id="fPol" required>
+        <span>Li e concordo com as <button type="button" class="btn-texto" id="abrirPol">políticas do atendimento</button>.</span>
+      </label>
+      <p class="erro-form" id="erroForm" role="alert" hidden></p>
+    </form>
+  </section>
+</main>
+
+<section class="sobre revelar" id="sobre" aria-labelledby="tSobre">
+  <div class="sobre-in">
+    <figure class="sobre-foto"><img src="/assets/lisboa.webp" alt="Lisboa ao entardecer com a Torre de Belém e calçada portuguesa" loading="lazy" width="260" height="360"></figure>
+    <div class="sobre-texto">
+      <p class="rotulo">O estúdio</p>
+      <h2 id="tSobre">Raízes portuguesas, cuidado brasileiro.</h2>
+      <p id="sobreTxt"></p>
+      <details class="politicas" id="polBloco">
+        <summary>Políticas do atendimento</summary>
+        <div id="polTxt"></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer class="rodape">
+  <img src="/assets/favicon.webp" alt="" width="40" height="40">
+  <p><span id="rodapeNome">Flor de Lusa Studio</span> · Nail Designer</p>
+  <p class="rodape-pe" id="rodapeInfo"></p>
+</footer>
+</div>
+
+<div class="barra" id="barra" aria-live="polite">
+  <div class="barra-in">
+    <div class="barra-resumo" id="barraResumo">
+      <span class="barra-titulo">Nenhum serviço escolhido</span>
+      <span class="barra-sub">Comece pelo passo 1</span>
+    </div>
+    <button class="btn" id="barraBtn" type="button" disabled>Continuar</button>
+  </div>
+</div>
+
+<div id="modais"></div>
+
+<script src="/js/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="/js/core.js"></script>
+<script src="/js/cliente.js"></script>
+<script src="/js/extra.js"></script>
+</body>
+</html>
