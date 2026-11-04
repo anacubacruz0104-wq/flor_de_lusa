@@ -125,7 +125,8 @@
   const escolhidos = () => st.servicos.filter((s) => st.sel.has(s.id));
   const duracao = () => escolhidos().reduce((a, s) => a + s.duracao_min, 0);
   const total = () => escolhidos().reduce((a, s) => a + s.preco, 0);
-  const temPrincipal = () => escolhidos().some((s) => s.tipo !== "extra");
+  /* qualquer serviço vale, inclusive só complementos (ex.: remoção avulsa) */
+  const temPrincipal = () => escolhidos().length > 0;
 
   /* ---------------- calendário ---------------- */
   function diaDisponivel(iso) {
@@ -168,7 +169,7 @@
     const box = $("#horas"), dica = $("#dicaHora");
     if (!st.config.agenda_aberta) { box.innerHTML = ""; return; }
     if (!temPrincipal()) {
-      dica.textContent = st.sel.size ? "Escolha também um serviço principal." : "Escolha o serviço e o dia para ver os horários.";
+      dica.textContent = "Escolha o serviço e o dia para ver os horários.";
       box.innerHTML = "";
       return;
     }

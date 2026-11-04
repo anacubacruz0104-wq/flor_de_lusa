@@ -189,9 +189,6 @@ begin
   if v_n <> array_length(p_servicos,1) then
     raise exception 'SERVICO_INVALIDO' using hint = 'Um dos serviços não está mais disponível. Atualize a página.';
   end if;
-  if not exists (select 1 from servicos where id = any(p_servicos) and tipo = 'principal') then
-    raise exception 'SERVICO_INVALIDO' using hint = 'Escolha um serviço principal além dos extras.';
-  end if;
 
   if p_data < v_agora::date or p_data > v_agora::date + c.janela_dias then
     raise exception 'DATA_INVALIDA' using hint = 'Data fora do período disponível.';

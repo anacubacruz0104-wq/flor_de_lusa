@@ -330,7 +330,6 @@
         const d = db();
         if (!d.config.agenda_aberta) throw new Error(ERROS.AGENDA_FECHADA);
         const itens = d.servicos.filter((s) => p.servicos.includes(s.id) && s.ativo).map(({ id, nome, preco, duracao_min, tipo }) => ({ id, nome, preco, duracao_min, tipo }));
-        if (!itens.some((i) => i.tipo === "principal")) throw new Error("Escolha um serviço principal além dos extras.");
         const dur = itens.reduce((a, b) => a + b.duracao_min, 0);
         const total = itens.reduce((a, b) => a + b.preco, 0);
         const ini = U.toMin(p.inicio), fim = ini + dur;
